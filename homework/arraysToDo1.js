@@ -119,6 +119,6 @@ const removeDupes = (arr) => {
   return newArr
 }
 
-console.log(removeDupes([-2,-2,3.14,5,5,10]))
-console.log(removeDupes([9,19,19,19,19,19,29]))
+// console.log(removeDupes([-2,-2,3.14,5,5,10]))
+// console.log(removeDupes([9,19,19,19,19,19,29]))
 
