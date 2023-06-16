@@ -111,18 +111,19 @@ class SLL{
   reverse(){
     if(!this.head) {
       return false;
+    } else if(!this.head.next) {
+      return
     } else {
       // cannot use tail
       // current order = 13, 10, 15, 18, 7869
-      let prev = null
       let initailHead = this.head; // 13
       let pointer = this.head.next // 10
       // want the order to be 7869, 18, 15, 10, 13
-      while(pointer != initailHead) { 
-        this.head = pointer  // 
+      while(pointer != null) { 
+        this.push_to_front(pointer.data)
         pointer = pointer.next
       }
-      return
+      initailHead.next = null;
     }
   }
 }
