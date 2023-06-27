@@ -22,10 +22,10 @@ const reverse = (arr) => {
   }
   return arr
 }
-console.log("Reverse")
-console.log(reverse(arr1))
-console.log(reverse(arr2))
-console.log(reverse(arr3))
+// console.log("Reverse")
+// console.log(reverse(arr1))
+// console.log(reverse(arr2))
+// console.log(reverse(arr3))
 
 //______________________________________________________________________________
 
@@ -57,25 +57,48 @@ console.log(reverse(arr3))
 // case 2 - shiftBy is same length as the array - arr[1,2,3] shiftBy = 3
 
 
-let arr4 = [1,2,3,4]
+
+
 
 const rotateArr = (arr, shiftBy) => {
+  let trueShift = shiftBy
   if(arr.length == 1 || shiftBy % arr.length == 0) {
     return arr
   }
   if(shiftBy > arr.length || shiftBy*-1 > arr.length) {
-    let trueShift = shiftBy % arr.length
-  } else {
-    let trueShift = shiftBy
+    trueShift = shiftBy % arr.length
   }
-  
+  // move to the right
+  if(trueShift > 0) {
+    for(let i=0; i<trueShift; i++) {
+      let last = arr[arr.length-1]
+      for(let j=arr.length-1; j > 0;j--) {
+        arr[j] = arr[j-1]
+      }
+      arr[0] = last
+    }
+    return arr
+  } 
+  // move to the left
+  else {
+    for(let i=0; i<trueShift*-1; i++) {
+      let first = arr[0]
+      for(let j=0; j < arr.length-1;j++) {
+        arr[j] = arr[j+1]
+      }
+      arr[arr.length-1] = first
+    }
+    return arr
+  }
 }
 
-console.log(rotateArr(arr1, 3))
-console.log(rotateArr(arr1, 13))
-console.log(rotateArr(arr2, 2))
-console.log(rotateArr(arr2, -2))
-console.log(rotateArr(arr3, 1))
+let arr4 = [1,2,3,4]
+console.log(arr4)
+console.log(rotateArr(arr4, 5))
+console.log(rotateArr(arr4, -6))
+// console.log(rotateArr(arr2, 2))
+// console.log(rotateArr(arr2, -2))
+// console.log(rotateArr(arr3, 1))
 
 
 //______________________________________________________________________________
