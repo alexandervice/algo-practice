@@ -93,9 +93,9 @@ const rotateArr = (arr, shiftBy) => {
 }
 
 let arr4 = [1,2,3,4]
-console.log(arr4)
-console.log(rotateArr(arr4, 5))
-console.log(rotateArr(arr4, -6))
+// console.log(arr4)
+// console.log(rotateArr(arr4, 5))
+// console.log(rotateArr(arr4, -6))
 // console.log(rotateArr(arr2, 2))
 // console.log(rotateArr(arr2, -2))
 // console.log(rotateArr(arr3, 1))
@@ -104,20 +104,28 @@ console.log(rotateArr(arr4, -6))
 //______________________________________________________________________________
 
 // Filter Range
-// popFront([0,5,10,15]) => 0 returned, with [5,10,15] printed in the function
-// popFront([4,5,7,9]) => 4 returned, with [5,7,9] printed in the function
-// ****** Notes ******
-// easiest to create a new array and then push each value from arr into it starting at i = 1
 
-const filterRange = (arr) => {
-  let newArr = []
-  for(let i=1; i<arr.length; i++) {
-    newArr.push(arr[i])
+// ****** Directions ******
+// Alan is good at breaking secret codes. One method is to eliminate values that lie outside of a specific known range. Given arr and values min and max, retain only the array values between min and max. Work in-place: return the array you are given, with values in original order. No built-in array functions.
+
+
+// it would be easy to do this with a new array, but I have to figure it out without that
+
+const filterRange = (arr, min, max) => {
+  let j = 0
+
+  for(let i=0; i<arr.length; i++) {
+    if(arr[i] >= min && arr[i] <= max) {
+
+    } else{
+      arr[i] = null
+    }
   }
-  console.log(newArr)
-  return arr[0]
+  return arr
 }
-// console.log(popFront([0,5,10,15]))
+
+let arr5 = [4,2,6,1,8,3,9,5,7]
+console.log(filterRange(arr5, 3, 6))
 // console.log(popFront([4,5,7,9]))
 
 //______________________________________________________________________________
