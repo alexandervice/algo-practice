@@ -108,25 +108,39 @@ let arr4 = [1,2,3,4]
 // ****** Directions ******
 // Alan is good at breaking secret codes. One method is to eliminate values that lie outside of a specific known range. Given arr and values min and max, retain only the array values between min and max. Work in-place: return the array you are given, with values in original order. No built-in array functions.
 
-
-// it would be easy to do this with a new array, but I have to figure it out without that
-
+// time / space complexity = O(n)
 const filterRange = (arr, min, max) => {
-  let j = 0
+  let newArr = []
 
   for(let i=0; i<arr.length; i++) {
     if(arr[i] >= min && arr[i] <= max) {
-
-    } else{
-      arr[i] = null
+      newArr.push(arr[i])
     }
   }
-  return arr
+  return newArr
 }
+
+// it would be easy to do this with a new array, but I have to figure it out without that
+// time / space complexity = O(1)
+
+const filterRangeAI = (arr, min, max) => {
+  let i = 0;
+
+  for (let j = 0; j < arr.length; j++) {
+    if (arr[j] >= min && arr[j] <= max) {
+      arr[i] = arr[j];
+      i++;
+    }
+  }
+
+  arr.length = i; // Truncate the array to remove remaining elements
+  return arr;
+};
 
 let arr5 = [4,2,6,1,8,3,9,5,7]
 console.log(filterRange(arr5, 3, 6))
-// console.log(popFront([4,5,7,9]))
+console.log(filterRangeAI(arr5, 3, 6))
+
 
 //______________________________________________________________________________
 
