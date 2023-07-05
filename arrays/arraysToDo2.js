@@ -138,27 +138,26 @@ const filterRangeAI = (arr, min, max) => {
 };
 
 let arr5 = [4,2,6,1,8,3,9,5,7]
-console.log(filterRange(arr5, 3, 6))
-console.log(filterRangeAI(arr5, 3, 6))
+// console.log(filterRange(arr5, 3, 6))
+// console.log(filterRangeAI(arr5, 3, 6))
 
 
 //______________________________________________________________________________
 
 // Concat1
-// popFront([0,5,10,15]) => 0 returned, with [5,10,15] printed in the function
-// popFront([4,5,7,9]) => 4 returned, with [5,7,9] printed in the function
-// ****** Notes ******
-// easiest to create a new array and then push each value from arr into it starting at i = 1
+// ****** Directions ******
+// Replicate JavaScript's concat(). Create a standalone function that accepts two arrays. Return a new array containing the first array's elements, followed by the second array's elements. Do not alter the original arrays. Ex.: arrConcat( ['a','b'], [1,2] ) should return new array ['a','b',1,2].
 
-const concat1 = (arr) => {
-  let newArr = []
-  for(let i=1; i<arr.length; i++) {
-    newArr.push(arr[i])
+
+const concat1 = (arr1, arr2) => {
+  let newArr = arr1
+  for(let i=0; i<arr2.length; i++) {
+    newArr.push(arr2[i])
   }
-  console.log(newArr)
-  return arr[0]
+  return newArr
 }
-// console.log(popFront([0,5,10,15]))
-// console.log(popFront([4,5,7,9]))
+console.log(concat1(arr1,arr2))
+console.log(concat1(arr3,arr4))
+
 
 //______________________________________________________________________________
