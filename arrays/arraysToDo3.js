@@ -87,7 +87,7 @@ const secondLargest = (arr) => {
   return secondBiggest
 }
 
-//______________________________________________________________________________
+//______________________
 //Here is what chatGPT gave me to improve the code
 const secondLargest2 = (arr) => {
   if (arr.length < 2) {
@@ -114,7 +114,13 @@ const secondLargest2 = (arr) => {
   return secondBiggest;
 };
 
-console.log(secondLargest2(arr4))
-console.log(secondLargest2(arr5))
-console.log(secondLargest2(arr6))
-console.log(secondLargest2(arr7))
+// console.log(secondLargest2(arr4))
+// console.log(secondLargest2(arr5))
+// console.log(secondLargest2(arr6))
+// console.log(secondLargest2(arr7))
+
+//______________________________________________________________________________
+
+// Second-Largest
+// ****** Directions ******
+// Return the second-largest element of an array. Given [42,1,4,Math.PI,7], return 7. If the array is too short, return null.
