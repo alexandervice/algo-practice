@@ -121,6 +121,16 @@ const secondLargest2 = (arr) => {
 
 //______________________________________________________________________________
 
-// Second-Largest
+// Nth-to-Last
 // ****** Directions ******
-// Return the second-largest element of an array. Given [42,1,4,Math.PI,7], return 7. If the array is too short, return null.
+// Return the element that is N-from-array’s-end. Given ([5,2,3,6,4,9,7],3), return 4. If the array is too short, return null.
+
+const nthToLast = (arr, n) => {
+  if(arr.length-n) {
+    return arr[arr.length-n]
+  } else {
+    return null
+  }
+}
+
+console.log(nthToLast(arr1,2))
