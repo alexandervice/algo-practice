@@ -133,4 +133,26 @@ const nthToLast = (arr, n) => {
   }
 }
 
-console.log(nthToLast(arr1,2))
+// console.log(nthToLast(arr1,2))
+
+//______________________________________________________________________________
+
+// Nth-Largest
+// ****** Directions ******
+// Liam has "N" number of Green Belt stickers for excellent Python projects. Given arr and N, return the Nth-largest element, where (N-1) elements are larger. Return null if needed.
+
+const nthLargest = (arr, n) => {
+  
+  let largestNumbers = Array(n).fill(-Infinity);
+  for(let i = 0; i < arr.length; i++) {
+    let min = Math.min(...largestNumbers);
+    let index = largestNumbers.indexOf(min);
+    if(arr[i] > min) {
+      largestNumbers[index] = arr[i];
+    }
+  }
+  let min = Math.min(...largestNumbers);
+  return (min === -Infinity) ? null : min;
+};
+
+
