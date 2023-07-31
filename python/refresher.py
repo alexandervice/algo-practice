@@ -82,4 +82,4 @@ print(sqrt(16))  # prints 4
 import numpy as np
 print(np.sqrt(16))  # prints 4.0
 
-# Add anything new below
+# Add anything new below. Practice makes perfect.
