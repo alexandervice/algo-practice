@@ -15,7 +15,10 @@ a = True  # a boolean
 # a list
 my_list = [1, 2, 3, 4, 5]
 # a dictionary
-my_dict = {'name': 'John', 'age': 27}
+my_dict = {
+              'name': 'John',
+              'age': 27
+          }
 # a set
 my_set = {1, 2, 3}
 # a tuple
