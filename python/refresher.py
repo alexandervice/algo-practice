@@ -1,3 +1,5 @@
+# This is a list of things to refresh my memory on python
+
 if 5 > 2:
     print("Five is greater than two!")  # this line is part of the 'if' block
 #______________________________________________________________________________
