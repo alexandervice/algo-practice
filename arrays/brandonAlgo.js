@@ -28,6 +28,6 @@ const taskAssigner = (workers, tasks) => {
 }
 
 const workers = ["w1","w2","w3"]
-const tasks = ["t1","t2","t3","t4","t5","t6","t7"]
+const tasks = ["t1","t2","t3","t4","t5","t6","t7","t8"]
 
 console.log(taskAssigner(workers,tasks))
