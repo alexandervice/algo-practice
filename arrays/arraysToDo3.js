@@ -59,7 +59,7 @@ const secondToLast = (arr) => {
 // assume every value in the array is a number
 const arr4 = [1,2,3,4,5,6,7,8,9]
 const arr5 = [-1,-2,-3,-4,-5,-6,-7,-8,-9]
-const arr6 = [100, 200, 50000, 17, 200, 199]
+const arr6 = [100, 200, 17, 200, 199]
 const arr7 = [9,8]
 
 
