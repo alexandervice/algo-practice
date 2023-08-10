@@ -12,6 +12,7 @@ const shuffle = (arr) => {
   return arr
 }
 
+
 shuffle(arr1)
 console.log(arr1)
 // this changes the original arr1 array
